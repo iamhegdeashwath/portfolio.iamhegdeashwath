@@ -1,0 +1,28 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.idea/
+.vscode/
+*.iml
+
+# Test output
+coverage/
+.nyc_output/
+
+# Optional: cache directories
+.eslintcache
+.rpt2_cache/
+.fusebox/
