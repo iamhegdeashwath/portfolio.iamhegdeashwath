@@ -4,7 +4,158 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>404 - Page Not Found</title>
-        <link rel="stylesheet" href="assets/404.css">
+        <style>
+            body {
+                background: rgb(254 253 237);
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: hidden;
+            }
+
+            .error-container {
+                background: rgb(254 253 237);
+                text-align: center;
+                padding: 3rem 1rem;
+                flex-shrink: 0;
+            }
+            
+            .error-container span {
+                line-height: 1.5;
+            }
+            
+            .error-title {
+                margin-bottom: 1rem;
+            }
+            
+            .error-sub-title {
+                margin-bottom: 2rem;
+            }
+            
+            .error-page-btn {
+                margin: auto;
+                margin-top: 20px;
+                position: relative;
+                width: 100%;
+                background: linear-gradient(
+                    to bottom right, 
+                    hsl(0, 0%, 25%) 0%, 
+                    hsla(0, 0%, 25%, 0) 50%
+                );
+                color: hsl(45, 100%, 72%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                padding: 13px 20px;
+                border-radius: 14px;
+                font-size: 14px;
+                text-transform: capitalize;
+                box-shadow: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+                z-index: 1;
+                transition: 0.25s ease;
+            }
+            
+            .error-img-container {
+                background: rgb(254 253 237);
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center; 
+                align-items: flex-end; 
+                flex-grow: 1;
+            }
+            
+            .error-img-container img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+            .error-page-btn::before {
+                content: "";
+                position: absolute;
+                inset: 1px;
+                background: linear-gradient(
+                    to bottom right, 
+                    hsla(240, 1%, 18%, 0.251) 0%, 
+                    hsla(240, 2%, 11%, 0) 100%
+                ), hsl(240, 2%, 13%);
+                border-radius: inherit;
+                z-index: -1;
+                transition: 0.25s ease;
+            }
+            
+            .error-page-btn ion-icon { font-size: 16px; }
+            
+            .error-page-btn:hover { 
+                background: linear-gradient(
+                    to bottom right, 
+                    hsl(45, 100%, 71%) 0%, 
+                    hsla(36, 100%, 69%, 0) 50%
+                ); 
+            }
+            
+            .error-page-btn:hover::before { 
+                background: linear-gradient(
+                    135deg, 
+                    hsla(45, 100%, 71%, 0.251) 0%, 
+                    hsla(35, 100%, 68%, 0) 59.86%
+                ), hsl(240, 2%, 13%); 
+            }
+            
+            .error-page-btn:disabled {
+                opacity: 0.7;
+                cursor: not-allowed;
+            }
+            
+            .error-page-btn:disabled:hover { 
+                background: linear-gradient(
+                    to bottom right, 
+                    hsl(0, 0%, 25%) 0%, 
+                    hsla(0, 0%, 25%, 0) 50%
+                );
+            }
+            
+            .error-page-btn:disabled:hover::before { 
+                background: linear-gradient(
+                    to bottom right, 
+                    hsla(240, 1%, 18%, 0.251) 0%, 
+                    hsla(240, 2%, 11%, 0) 100%
+                ), hsl(240, 2%, 13%);
+            }
+
+            /*---------------------------------*\
+                    #RESPONSIVE 
+            (Larger than 580px screen)
+            \*---------------------------------*/
+
+            @media (min-width: 580px) {
+                .error-page-btn {
+                    font-size: 16px;
+                    padding: 16px 20px;
+                }
+
+                .error-page-btn ion-icon { font-size: 18px; }
+            }
+
+            /*---------------------------------*\
+                    #RESPONSIVE 
+            (Larger than 768px screen)
+            \*---------------------------------*/
+
+            @media (min-width: 768px) {
+                .error-page-btn {
+                    width: max-content;
+                    margin-left: auto;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="error-container">
@@ -12,7 +163,7 @@
                 <h1 class="error-title">Oops! Something went wrong.</h1>
                 <h3 class="error-sub-title">404 - Page Not Found</h3>
             </span>
-            <button class="error-page-btn form-btn" onclick="window.location.href='/'">
+            <button class="error-page-btn" onclick="window.location.href='/'">
                 <ion-icon name="play-back"></ion-icon>
                 Go Back to Home
             </button>
