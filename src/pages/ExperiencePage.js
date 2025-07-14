@@ -103,7 +103,10 @@ const ExperiencePage = ({images, pageCard}) => {
                                     </div>
                                     <div>
                                         <h2 className="h2 timeline-item-title">{exp.title}</h2>
-                                        <h5 className="h5 timeline-item-title">{exp.company} | {exp.location}</h5>
+                                        <h5 className="h5 timeline-item-title">{exp.company}
+                                            <span className="vertical-separator"> | </span>
+                                            {exp.location}
+                                        </h5>
                                         <span>{exp.from} — {exp.to}</span>
                                     </div>
                                 </div>

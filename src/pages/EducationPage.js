@@ -66,7 +66,10 @@ const EducationPage = ({pageCard}) => {
                         educationDetails.map((school, index) => {
                             return (
                                 <li className="timeline-item" key={index}>
-                                    <h4 className="h4 timeline-item-title">{school.name} | {school.location}</h4>
+                                    <h4 className="h4 timeline-item-title">{school.name} 
+                                        <span className="vertical-separator"> | </span>
+                                        {school.location}
+                                    </h4>
                                     <span className='h5'>{school.degree} | {school.major}</span>
                                     <p className='h5'>{school.period}</p>
                                 </li>

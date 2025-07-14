@@ -928,6 +928,7 @@ footer {
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
   line-height: 1.6;
+  display: inline;
 }
 
 .timeline-item:not(:last-child)::before {
@@ -968,6 +969,10 @@ footer {
   text-align: justify;
   max-width: 850px;
   margin-bottom: 5px;
+}
+
+.vertical-separator {
+  color: var(--vegas-gold);
 }
 
 .company-logo {
